@@ -1,0 +1,27 @@
+#container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+#container > div{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.img_1 > div {
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-fillter: blur(50px);
+}
+.img_2 > div {
+    -webkit-backdrop-filter: contrast(500%);
+    backdrop-fillter: contrast(500%);
+}
+.img_3 > div {
+    -webkit-backdrop-filter: sepia(100%);
+    backdrop-fillter: sepia(100%);
+}
+.img_4 > div {
+    -webkit-backdrop-filter: saturate(0%);
+    backdrop-fillter: saturate(0%);
+}

@@ -1,0 +1,32 @@
+#container {
+    /* container 화면 자체가 너무 커서 scroll 되는 것.
+    scroll-snap 기능 쓰려면 container 안에서 요소들이 움직이게, scroll 되게 해야함.
+    container의 크기를 화면에 딱 맞게 해주어야 함 */
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+#container > div {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+/* 사파리에서 돌아가려면 webkit 벤더 프리픽스를 본 코드 윗부분에 넣어줘야 함 */
+.img_1 > div {
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+}
+
+.img_2> div {
+    -webkit-backdrop-filter: contrast(500%);
+    backdrop-filter: contrast(500%);
+}
+
+.img_3 > div {
+    -webkit-backdrop-filter: sepia(100%);
+    backdrop-filter: sepia(100%);
+}
+
+.img_4 > div {
+    -webkit-backdrop-filter: saturate(0%);
+    backdrop-filter: saturate(0%);
+}

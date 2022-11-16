@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data = {
+            odd: [],
+            even: [],
+            setNum: function(...num){
+                num.forEach((a)=>{
+                    if(a%2==1){
+                        this.odd.push(a);
+                    } else {
+                        this.even.push(a);
+                    }
+                })
+            },
+            get getNum(){
+                return [...this.odd, ...this.even].sort();
+            }
+        }
+
+        data.setNum(4, 5, 2, 8, 3);
+        console.log(data.odd.sort());
+        console.log(data.even.sort());
+        console.log(data.getNum);
+    </script>
+</body>
+</html>

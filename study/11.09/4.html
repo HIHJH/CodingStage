@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Unit{
+            constructor(){
+                this.공격력 = 5;
+                this.체력 = 100;
+            }
+            get battlePoint(){
+                return this.공격력 + this.체력;
+            }
+            set heal(num) {
+                this.체력 += num;
+            }
+        }
+
+        var unit = new Unit();
+        console.log(unit.battlePoint);
+        unit.heal = 20;
+        console.log(unit.battlePoint);
+    </script>
+</body>
+</html>

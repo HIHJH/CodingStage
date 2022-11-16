@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10%;
+    background-size: 100% 100%
+
+}
+
+.week_section{
+    font-size:50px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10%;
+}
+
+.weather_section{
+    font-size:50px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10%;
+}
+
+.text{
+    font-size:40px;
+    font-weight: 900;
+    text-align: center;
+}
