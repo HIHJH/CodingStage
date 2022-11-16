@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var products = [
+        {
+            name1 : 'chair',
+            price1 : 7000,
+        },
+        {
+            name2 : 'sofa',
+            price : 5000,
+        },
+        {
+            name1 : 'desk',
+            price3 : 9000,
+        },
+        ]; 
+
+        let newValue;
+        let newKey;
+
+        for (let item of products) {
+        for (let key in item) {
+            if (isNaN(parseInt(key.slice(-1))) == false) {
+            newValue = item[key];
+            newKey = key.slice(0, -1); 
+            item[newKey] = newValue;
+            delete item[key]; 
+            }
+        }
+        }
+
+console.log(products)
+
+    </script>
+</body>
+</html>

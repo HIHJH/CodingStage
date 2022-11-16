@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <img id="test" src="https://codingapple1.github.io/kona.jpg">
+
+    <script>
+
+        var 프로미스 = new Promise(function(성공, 실패){
+            $.get('http://codingapple1.github.io/hello.txt').done(function(결과){
+                성공(결과)
+            });
+        });
+
+        프로미스.then(function(결과){
+            console.log(결과)
+        });
+
+    </script>
+</body>
+</html>

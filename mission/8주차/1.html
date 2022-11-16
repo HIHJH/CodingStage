@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="test" src="https://codingapple1.github.io/kona.jpg">
+
+    <script>
+
+        var 이미지로딩 = new Promise(function(성공, 실패){
+            var img = document.querySelector('#test');
+            img.addEventListener('load', function(){
+                성공();
+            });
+            img.addEventListener('error', function(){
+                실패();
+            });
+        });
+
+        이미지로딩.then(function(){
+            console.log('로딩성공')
+        }).catch(function(){
+            console.log('로딩실패')
+        });
+        
+    </script>
+</body>
+</html>
